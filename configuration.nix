@@ -40,22 +40,7 @@
     variant = "";
   };
   
-  programs.niri.enable = true;  
-  
-  environment.etc."xdg/niri/config.kdl".text = ''
-    binds {
-      Mod+Return { spawn "kitty"; }
-      Mod+D { spawn "fuzzel"; }
-      Mod+Q { close-window; }
-
-      Mod+Shift+E { quit; }
-   }
-
-   layout {
-     gaps 16
-     center-focused-column "never"
-   }
-  '';
+  programs.niri.enable = true;
 
   # comment out on real system!!!!!
   virtualisation.virtualbox.guest.enable = true;
