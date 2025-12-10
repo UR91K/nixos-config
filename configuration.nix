@@ -85,6 +85,14 @@
   };
 
   environment.etc."xdg/niri/config.kdl".text = ''
+    // CRITICAL for VirtualBox: Force software rendering
+    prefer-no-csd
+    
+    render {
+      // This tells niri to use software rendering (pixman) instead of GPU
+      prefer-software-rendering true
+    }
+
     binds {
       Mod+Return { spawn "kitty"; }
       Mod+D { spawn "fuzzel"; }
