@@ -87,6 +87,27 @@
   environment.sessionVariables = {
     WGPU_BACKEND = "gl";
   };
+
+  environment.etc."xdg/niri/config.kdl".text = ''
+    binds {
+      Mod+Return { spawn "kitty"; }
+      Mod+D { spawn "fuzzel"; }
+      Mod+Q { close-window; }
+      Mod+Shift+E { quit; }
+    }
+
+    layout {
+      gaps 16
+      center-focused-column "never"
+    }
+
+    // CRITICAL for VirtualBox:
+    // Forces software cursor so it doesn't disappear
+    cursor {
+      no-hardware-cursors
+    }
+  '';
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
