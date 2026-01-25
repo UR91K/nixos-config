@@ -36,6 +36,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable Bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+
   # Set your time zone.
   time.timeZone = "Africa/Johannesburg";
 
