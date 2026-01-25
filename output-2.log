@@ -1,0 +1,57 @@
+unpacking 'github:sodiboo/niri/2b3a80b477865177dbdf030d9d5360191b03f312' into the Git cache...
+warning: updating lock file "/etc/nixos/flake.lock":
+• Added input 'niri':
+    'github:sodiboo/niri/2b3a80b477865177dbdf030d9d5360191b03f312?narHash=sha256-O9N16KyMuQZ/I96XAjWznRTJ/K4diTvxicJcg9SLOfw%3D' (2024-04-02)
+• Added input 'niri/crane':
+    'github:ipetkov/crane/81c393c776d5379c030607866afef6406ca1be57?narHash=sha256-5jfLQx0U9hXbi2skYMGodDJkIgffrjIOgMRjZqms2QE%3D' (2024-03-05)
+• Added input 'niri/crane/nixpkgs':
+    follows 'niri/nixpkgs'
+• Added input 'niri/fenix':
+    'github:nix-community/fenix/4be608f4f81d351aacca01b21ffd91028c23cc22?narHash=sha256-O6EC6QELBLHzhdzBOJj0chx8AOcd4nDRECIagfT5Nd0%3D' (2024-03-01)
+• Added input 'niri/fenix/nixpkgs':
+    follows 'niri/nixpkgs'
+• Added input 'niri/fenix/rust-analyzer-src':
+    'github:rust-lang/rust-analyzer/9efa23c4dacee88b93540632eb3d88c5dfebfe17?narHash=sha256-8HHRXm4kYQLdUohNDUuCC3Rge7fXrtkjBUf0GERxrkM%3D' (2024-02-29)
+• Added input 'niri/flake-utils':
+    'github:numtide/flake-utils/d465f4819400de7c8d874d50b982301f28a84605?narHash=sha256-q6EQdSeUZOG26WelxqkmR7kArjgWCdw5sfJVHPH/7j8%3D' (2024-02-28)
+• Added input 'niri/flake-utils/systems':
+    'github:nix-systems/default/da67096a3b9bf56a91d16901293e51ba5b49a27e?narHash=sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768%3D' (2023-04-09)
+• Added input 'niri/nix-filter':
+    'github:numtide/nix-filter/3449dc925982ad46246cfc36469baf66e1b64f17?narHash=sha256-kcw1yFeJe9N4PjQji9ZeX47jg0p9A0DuU4djKvg1a7I%3D' (2024-01-15)
+• Added input 'niri/nixpkgs':
+    follows 'nixpkgs'
+building the system configuration...
+warning: Git tree '/etc/nixos' is dirty
+unpacking 'github:numtide/flake-utils/d465f4819400de7c8d874d50b982301f28a84605?narHash=sha256-q6EQdSeUZOG26WelxqkmR7kArjgWCdw5sfJVHPH/7j8%3D' into the Git cache...
+error:
+       … while calling the 'head' builtin
+         at /nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/lib/attrsets.nix:1713:13:
+         1712|           if length values == 1 || pred here (elemAt values 1) (head values) then
+         1713|             head values
+             |             ^
+         1714|           else
+
+       … while evaluating the attribute 'value'
+         at /nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/lib/modules.nix:1118:7:
+         1117|     // {
+         1118|       value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |       ^
+         1119|       inherit (res.defsFinal') highestPrio;
+
+       … while evaluating the option `system.build.toplevel':
+
+       … while evaluating definitions from `/nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/nixos/modules/system/activation/top-level.nix':
+
+       … while evaluating the option `assertions':
+
+       … while evaluating definitions from `/nix/store/agc0l7lkrkqzjv9v847rd0w057dl460s-source/nixos/common.nix':
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: attribute 'homeManagerModules' missing
+       at /nix/store/x4b5jxh4miljq78wk7wp7z1hskpy61vi-source/home-manager/home.nix:6:5:
+            5|     ./niri.nix
+            6|     inputs.niri.homeManagerModules.niri
+             |     ^
+            7|   ];
+Command 'nix --extra-experimental-features 'nix-command flakes' build --print-out-paths '.#nixosConfigurations."nixos".config.system.build.toplevel' --no-link' returned non-zero exit status 1.
