@@ -2,13 +2,22 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+  # Home Manager setup
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      # Change 'jude' to your actual username if needed
+      "jude" = import ./home-manager/home.nix;
+    };
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -38,6 +47,15 @@
     layout = "us";
     variant = "";
   };
+
+  # Enable the ly display manager.
+  services.displayManager.ly.enable = true;
+
+  # Enable the niri window manager.
+  programs.niri.enable = true;
+
+  # Set niri as the default session
+  services.displayManager.defaultSession = "niri";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jude = {
