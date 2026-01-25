@@ -1,6 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    ./niri.nix
+    inputs.niri.homeManagerModules.niri
+  ];
+
   # Set your state version
   home.stateVersion = "23.11";
 

@@ -55,9 +55,6 @@
   # Enable the ly display manager.
   services.displayManager.ly.enable = true;
 
-  # Enable the niri window manager.
-  programs.niri.enable = true;
-
   # Set niri as the default session
   services.displayManager.defaultSession = "niri";
 
@@ -86,7 +83,6 @@
     rbld = "sudo nixos-rebuild switch";
     flakerbld = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
     cfgnix = "sudo micro /etc/nixos/configuration.nix";
-    cfgflake = "sudo micro /etc/nixos/flake.nix";
     cfghome = "sudo micro /etc/nixos/home.nix";
   };
   # Some programs need SUID wrappers, can be configured further or are
