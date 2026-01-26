@@ -1,0 +1,28 @@
+building the system configuration...
+error:
+       … while calling the 'head' builtin
+         at /nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/lib/attrsets.nix:1713:13:
+         1712|           if length values == 1 || pred here (elemAt values 1) (head values) then
+         1713|             head values
+             |             ^
+         1714|           else
+
+       … while evaluating the attribute 'value'
+         at /nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/lib/modules.nix:1118:7:
+         1117|     // {
+         1118|       value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |       ^
+         1119|       inherit (res.defsFinal') highestPrio;
+
+       … while evaluating the option `system.build.toplevel':
+
+       … while evaluating definitions from `/nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/nixos/modules/system/activation/top-level.nix':
+
+       … while evaluating the option `home-manager.users.jude.xdg.portal.extraPortals':
+
+       … while evaluating definitions from `/nix/store/s8ddjdabfacfjahzf76pvwk6smfmpnpz-source/configuration.nix':
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: The option `home-manager.users.jude.programs.niri.package' in `/nix/store/agc0l7lkrkqzjv9v847rd0w057dl460s-source/nixos/common.nix' is already declared in `/nix/store/s8ddjdabfacfjahzf76pvwk6smfmpnpz-source/configuration.nix'.
+Command 'nix --extra-experimental-features 'nix-command flakes' build --print-out-paths '.#nixosConfigurations."nixos".config.system.build.toplevel' --no-link' returned non-zero exit status 1.
