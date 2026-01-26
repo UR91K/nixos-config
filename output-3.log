@@ -1,4 +1,27 @@
 warning: Git tree '/etc/nixos' is dirty
+unpacking 'github:sodiboo/niri-flake/419d7b73430a1f3de344a85bed50e770227f0b77' into the Git cache...
+warning: updating lock file "/etc/nixos/flake.lock":
+• Updated input 'niri':
+    'github:sodiboo/niri/2b3a80b477865177dbdf030d9d5360191b03f312?narHash=sha256-O9N16KyMuQZ/I96XAjWznRTJ/K4diTvxicJcg9SLOfw%3D' (2024-04-02)
+  → 'github:sodiboo/niri-flake/419d7b73430a1f3de344a85bed50e770227f0b77?narHash=sha256-OMQ%2BaRJdx1x%2Bu3JG/Zlj1YWeMPmJjKMyy6OMf3M7U78%3D' (2026-01-25)
+• Removed input 'niri/crane'
+• Removed input 'niri/crane/nixpkgs'
+• Removed input 'niri/fenix'
+• Removed input 'niri/fenix/nixpkgs'
+• Removed input 'niri/fenix/rust-analyzer-src'
+• Removed input 'niri/flake-utils'
+• Removed input 'niri/flake-utils/systems'
+• Added input 'niri/niri-stable':
+    'github:YaLTeR/niri/01be0e65f4eb91a9cd624ac0b76aaeab765c7294?narHash=sha256-RLD89dfjN0RVO86C/Mot0T7aduCygPGaYbog566F0Qo%3D' (2025-08-30)
+• Added input 'niri/niri-unstable':
+    'github:YaLTeR/niri/5ddcf195dd6cb24cf67c24d4622ef0a4dca9ed12?narHash=sha256-fqaPwglujRdIXArV6a/0SG4otGPlvFGqFJo5EOAKnX0%3D' (2026-01-25)
+• Removed input 'niri/nix-filter'
+• Added input 'niri/nixpkgs-stable':
+    'github:NixOS/nixpkgs/078d69f03934859a181e81ba987c2bb033eebfc5?narHash=sha256-9yA/LIuAVQq0lXelrZPjLuLVuZdm03p8tfmHhnDIkms%3D' (2026-01-22)
+• Added input 'niri/xwayland-satellite-stable':
+    'github:Supreeeme/xwayland-satellite/388d291e82ffbc73be18169d39470f340707edaa?narHash=sha256-m%2B9tUfsmBeF2Gn4HWa6vSITZ4Gz1eA1F5Kh62B0N4oE%3D' (2025-08-18)
+• Added input 'niri/xwayland-satellite-unstable':
+    'github:Supreeeme/xwayland-satellite/cf14278b92b0a91d01587f09b4b00ea655ae24e6?narHash=sha256-Q0BVubV9ZnmLs506EhBSPglM%2BYJK56wsQNbeecvWPUo%3D' (2026-01-25)
 building the system configuration...
 warning: Git tree '/etc/nixos' is dirty
 error:
@@ -27,7 +50,7 @@ error:
        (stack trace truncated; use '--show-trace' to show the full, detailed trace)
 
        error: attribute 'homeManagerModules' missing
-       at /nix/store/6p2s8fx46gh2y019v2wq9x4z3zal1wlf-source/home-manager/home.nix:6:5:
+       at /nix/store/sxv8linr3x7ljhglhkjf46p20n5jsma5-source/home-manager/home.nix:6:5:
             5|     ./niri.nix
             6|     inputs.niri.homeManagerModules.default
              |     ^

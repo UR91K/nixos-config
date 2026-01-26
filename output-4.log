@@ -1,0 +1,35 @@
+warning: Git tree '/etc/nixos' is dirty
+building the system configuration...
+warning: Git tree '/etc/nixos' is dirty
+error:
+       … while calling the 'head' builtin
+         at /nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/lib/attrsets.nix:1713:13:
+         1712|           if length values == 1 || pred here (elemAt values 1) (head values) then
+         1713|             head values
+             |             ^
+         1714|           else
+
+       … while evaluating the attribute 'value'
+         at /nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/lib/modules.nix:1118:7:
+         1117|     // {
+         1118|       value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |       ^
+         1119|       inherit (res.defsFinal') highestPrio;
+
+       … while evaluating the option `system.build.toplevel':
+
+       … while evaluating definitions from `/nix/store/8hx8jwa24q6rkzhca9iqy5ckk9rbphi1-source/nixos/modules/system/activation/top-level.nix':
+
+       … while evaluating the option `assertions':
+
+       … while evaluating definitions from `/nix/store/agc0l7lkrkqzjv9v847rd0w057dl460s-source/nixos/common.nix':
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: attribute 'homeManagerModules' missing
+       at /nix/store/jayly542h23nf2i76n22sxay90bzhm7g-source/home-manager/home.nix:6:5:
+            5|     ./niri.nix
+            6|     inputs.niri.homeManagerModules.default
+             |     ^
+            7|   ];
+Command 'nix --extra-experimental-features 'nix-command flakes' build --print-out-paths '.#nixosConfigurations."nixos".config.system.build.toplevel' --no-link' returned non-zero exit status 1.
