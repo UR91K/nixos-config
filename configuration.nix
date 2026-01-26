@@ -79,6 +79,38 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     micro
+    
+    # Zen Browser (from flake)
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    
+    # File manager
+    nautilus
+    
+    # Wayland utilities
+    waybar
+    grim          # Screenshot tool
+    slurp         # Screen area selector
+    wl-clipboard  # Clipboard utilities
+    
+    # Notifications
+    mako
+    
+    # Network & Bluetooth
+    networkmanagerapplet
+    blueman
+    
+    # Screen locker
+    swaylock
+    
+    # Clipboard manager
+    cliphist
+    
+    # Media viewers
+    imv           # Image viewer
+    evince        # PDF viewer
+    
+    # Audio control
+    pavucontrol
   ];
 
   environment.variables.EDITOR = "micro";
@@ -93,6 +125,12 @@
   # started in user sessions.
   # programs.mtr.enable = true;
   programs.git.enable = true;
+  
+  # Enable GVfs for Nautilus (trash, network drives, etc.)
+  services.gvfs.enable = true;
+  
+  # Enable udisks2 for auto-mounting USB drives
+  services.udisks2.enable = true;
   
   # programs.gnupg.agent = {
   #   enable = true;

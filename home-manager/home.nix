@@ -17,4 +17,19 @@
     kitty
     fuzzel
   ];
+
+  # Waybar configuration
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+  };
+
+  # Mako notification daemon
+  services.mako = {
+    enable = true;
+    defaultTimeout = 5000;
+  };
+
+  # Clipboard manager
+  services.cliphist.enable = true;
 }

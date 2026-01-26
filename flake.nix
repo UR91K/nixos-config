@@ -13,9 +13,14 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, niri, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, niri, zen-browser, ... }@inputs: {
     nixosConfigurations = {
       # Change 'nixos' to your actual hostname
       nixos = nixpkgs.lib.nixosSystem {

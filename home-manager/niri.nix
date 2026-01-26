@@ -110,6 +110,7 @@
         # Application launchers
         "Mod+T".action = spawn "kitty";
         "Mod+E".action = spawn "nautilus"; # File browser
+        "Mod+B".action = spawn "zen-browser"; # Zen Browser
         "Alt+Space".action = spawn "fuzzel";
         "Menu".action = spawn "fuzzel";
         
@@ -153,7 +154,7 @@
         "Mod+Alt+Right".action = consume-or-expel-window-right;
 
         # Screenshot
-        "Mod+Shift+S".action.screenshot = [];
+        "Mod+Shift+S".action = spawn "grim" "-g" "$(slurp)" "-" "|" "wl-copy";
 
         # Show hotkeys overlay
         "Mod+H".action = show-hotkey-overlay;
@@ -162,6 +163,7 @@
         "Mod+Shift+E".action = quit;
         "Mod+Ctrl+Shift+Q".action = quit;
         "Mod+Shift+P".action = power-off-monitors;
+        "Mod+L".action = spawn "swaylock";
 
         # Audio controls
         "XF86AudioRaiseVolume" = {
