@@ -26,22 +26,22 @@ error:
 
        … while evaluating the option `home-manager.users.jude.xdg.configFile.niri-config.enable':
 
-       … while evaluating definitions from `/nix/store/ia3wszfi7x7i36qwzxrjyqjpimdgs1h6-source/configuration.nix':
+       … while evaluating definitions from `/nix/store/kgg23d8851sjv0m1wh35cvp3f5a9r6c3-source/configuration.nix':
 
        … while evaluating the option `home-manager.users.jude.programs.niri.finalConfig':
 
        … while evaluating the option `home-manager.users.jude.programs.niri.config."[definition 1-entry 5]".children."[definition 1-entry 1]".children':
 
-       … while evaluating definitions from `/nix/store/ia3wszfi7x7i36qwzxrjyqjpimdgs1h6-source/configuration.nix':
+       … while evaluating definitions from `/nix/store/kgg23d8851sjv0m1wh35cvp3f5a9r6c3-source/configuration.nix':
 
        … while evaluating the option `home-manager.users.jude.programs.niri.settings.binds."Mod+Q".action':
 
-       … while evaluating definitions from `/nix/store/ia3wszfi7x7i36qwzxrjyqjpimdgs1h6-source/home-manager/niri.nix':
+       … while evaluating definitions from `/nix/store/kgg23d8851sjv0m1wh35cvp3f5a9r6c3-source/home-manager/niri.nix':
 
        (stack trace truncated; use '--show-trace' to show the full, detailed trace)
 
        error: attribute 'lib' missing
-       at /nix/store/ia3wszfi7x7i36qwzxrjyqjpimdgs1h6-source/home-manager/niri.nix:27:20:
+       at /nix/store/kgg23d8851sjv0m1wh35cvp3f5a9r6c3-source/home-manager/niri.nix:27:20:
            26|       # Basic Keybindings
            27|       binds = with config.programs.niri.lib.actions; {
              |                    ^
