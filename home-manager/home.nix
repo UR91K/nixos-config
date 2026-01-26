@@ -3,7 +3,7 @@
 {
   imports = [
     ./niri.nix
-    inputs.niri.homeManagerModules.default
+    inputs.niri.homeModules.niri
   ];
 
   # Set your state version
