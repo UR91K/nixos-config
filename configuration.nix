@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.niri.nixosModules.niri
     ];
 
   # Home Manager setup
@@ -57,6 +58,9 @@
 
   # Set niri as the default session
   services.displayManager.defaultSession = "niri";
+
+  # Enable niri compositor
+  programs.niri.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jude = {
