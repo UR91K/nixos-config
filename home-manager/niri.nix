@@ -2,7 +2,7 @@
 
 {
   programs.niri = {
-    enable = true;
+    # enable is set at the system level via programs.niri.enable in configuration.nix
     # This is where all your Niri-specific settings go
     settings = {
       input = {
