@@ -3,7 +3,7 @@
 {
   imports = [
     ./niri.nix
-    inputs.niri.homeModules.niri
+    # The niri home-manager module is automatically imported via the NixOS module
   ];
 
   # Set your state version
