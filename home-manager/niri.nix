@@ -24,15 +24,15 @@
       };
 
       # Basic Keybindings
-      binds = with config.programs.niri.lib.actions; {
-        "Mod+T".action = spawn [ "kitty" ];
-        "Mod+R".action = spawn [ "fuzzel" ]; # A popular Wayland launcher
+      binds = with config.lib.niri.actions; {
+        "Mod+T".action = spawn "kitty";
+        "Mod+R".action = spawn "fuzzel"; # A popular Wayland launcher
         "Mod+Q".action = close-window;
         "Mod+Shift+E".action = quit;
 
         # Audio/Brightness (Modern laptop keys)
-        "XF86AudioRaiseVolume".action = spawn [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+" ];
-        "XF86AudioLowerVolume".action = spawn [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-" ];
+        "XF86AudioRaiseVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+";
+        "XF86AudioLowerVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-";
       };
     };
   };
